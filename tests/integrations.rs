@@ -59,12 +59,7 @@ fn test_write_with_title() {
 #[test]
 fn test_write_with_written_title() {
   let (mut cmd, temp_dir) = setup_command();
-  let assert = cmd
-    .arg("write")
-    .arg("-t")
-    .arg("atitle")
-    .write_stdin("N\n".as_bytes())
-    .assert();
+  let assert = cmd.arg("write").write_stdin("N\n".as_bytes()).assert();
 
   assert.success();
 

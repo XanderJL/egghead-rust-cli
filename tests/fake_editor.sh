@@ -1,1 +1,2 @@
-echo "testing" >> $1;
+#!/usr/bin/env bash
+echo "testing" >>$1
